@@ -2,11 +2,11 @@ package com.example.demo.service;
 
 import com.example.demo.dormain.Role;
 import com.example.demo.dormain.User;
+import com.example.demo.mapper.DormaintoSpringUserMapper;
 import com.example.demo.repo.IRoleRepository;
 import com.example.demo.repo.IUserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -14,11 +14,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Service @RequiredArgsConstructor @Transactional @Slf4j
-public class UserServiceImpl implements  IUserService, UserDetailsService {
+@Service
+@RequiredArgsConstructor
+@Transactional
+@Slf4j
+public class UserServiceImpl implements IUserService, UserDetailsService {
 
     private final IUserRepository userRepo;
     private final IRoleRepository roleRepo;
@@ -29,23 +31,17 @@ public class UserServiceImpl implements  IUserService, UserDetailsService {
 
         var user = userRepo.findByUsername(username);
 
-        if (user == null){
+        if (user == null) {
             log.error("User not found in the database");
             throw new UsernameNotFoundException("User not found in the database");
         }
 
         log.info("User found in the database");
 
-        var name = user.getUsername();
-        var password = user.getPassword();
-        var authorities = new ArrayList<SimpleGrantedAuthority>();
-
-        user.getRoles().forEach( role ->
-                authorities.add(new SimpleGrantedAuthority(role.getName()))
-        );
-
-        return new org.springframework.security.core.userdetails.User(name,password,authorities);
+        return DormaintoSpringUserMapper.dormainToSpringUserMapper(user);
     }
+
+
 
     @Override
     public User saveUser(User user) {
@@ -64,7 +60,7 @@ public class UserServiceImpl implements  IUserService, UserDetailsService {
 
     @Override
     public void addRoleToUser(String userName, String roleName) {
-        log.info("Adding role {} to user {} ",roleName,userName);
+        log.info("Adding role {} to user {} ", roleName, userName);
         User user = userRepo.findByUsername(userName);
         Role role = roleRepo.findAllByName(roleName);
         user.getRoles().add(role);
@@ -87,6 +83,4 @@ public class UserServiceImpl implements  IUserService, UserDetailsService {
         log.info("Fetching all roles");
         return roleRepo.findAll();
     }
-
-
 }
