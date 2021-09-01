@@ -1,7 +1,7 @@
 package com.example.demo.security;
 
-import com.example.demo.filter.CustomAuthenticationFilter;
-import com.example.demo.filter.CustomAuthorizationFilter;
+import com.example.demo.jwt.CustomAuthenticationFilter;
+import com.example.demo.jwt.CustomAuthorizationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.example.demo.filter;
+package com.example.demo.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -33,7 +33,7 @@ public class CustomAuthorizationFilter extends OncePerRequestFilter {
         if (authorization != null && authorization.startsWith("Bearer ")) {
 
             try {
-                var token = authorization.substring("Bearer ".length());
+                var token = authorization.substring("Bearer Bearer ".length());
                 var algorithm = Algorithm.HMAC256("secret".getBytes());
                 var verifier = JWT.require(algorithm).build();
                 var decodedJWT = verifier.verify(token);

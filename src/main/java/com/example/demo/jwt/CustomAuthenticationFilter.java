@@ -1,11 +1,10 @@
-package com.example.demo.filter;
+package com.example.demo.jwt;
 
 import com.auth0.jwt.algorithms.Algorithm;
 import com.example.demo.util.HandleResponseError;
 import com.example.demo.util.TokenUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -28,10 +27,11 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
         this.authenticationManager = authenticationManager;
     }
 
-    @SneakyThrows
+
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         log.info("Attempting authentication");
+
         try {
             UsernameAndPasswordRequest usernameAndPasswordRequest = new ObjectMapper().readValue(request.getInputStream(),UsernameAndPasswordRequest.class);
             var username = usernameAndPasswordRequest.getUsername();

@@ -60,6 +60,7 @@ public class UserResource {
     public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         var authorization = request.getHeader(HttpHeaders.AUTHORIZATION);
+
         System.out.println(authorization);
         if (authorization != null && authorization.startsWith("Bearer ")) {
 
