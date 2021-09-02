@@ -14,7 +14,17 @@
     - Spring Security  - Highly customizable authentication and access-control framework for spring applications.
     - Spring Dev tools - Provides fast application restarts, Live reload and configurations for enhanced development experience.
     - Lombok - Java annotation library which helps reduce boilerplate code.
-    
+   
+Requirements
+------------
+* [Java Platform (JDK) 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Apache Maven 3.x](http://maven.apache.org/)
+
+Quick start
+-----------
+1. `mvn clean spring-boot:run`
+3. Point your browser to [http://localhost:8080/](http://localhost:8080/)
+
 ## ScreenShots
    - Login to get the access and refresh token.
 
