@@ -14,11 +14,11 @@
     - Spring Security  - Highly customizable authentication and access-control framework for spring applications.
     - Spring Dev tools - Provides fast application restarts, Live reload and configurations for enhanced development experience.
     - Lombok - Java annotation library which helps reduce boilerplate code.
-## Screenshots
 
-    * Login 
+    - Login 
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/login.png" width="320"/>
     * Bad credentials log in.
+    
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/badcredentials.png" width="320"/>
     * All the users in the database.
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/allusers.png" width="320"/>
