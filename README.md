@@ -28,7 +28,7 @@
 
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/notAdmin.png" />
    
-   - Refresh token
+   - Using the Refresh token to get another access token
 
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/refreshtoken.png" />
  
@@ -36,9 +36,9 @@
 
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/allusers.png" />
    
-   - Adding users to the database, You need to have the admin role
+   - Adding users to the database, You need to have the admin role.
    
-         <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/addMember.png"/>
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/addMember.png" />
 
    - User already exists in the database.
     
