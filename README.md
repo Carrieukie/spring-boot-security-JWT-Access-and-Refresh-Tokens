@@ -14,17 +14,17 @@
     - Spring Security  - Highly customizable authentication and access-control framework for spring applications.
     - Spring Dev tools - Provides fast application restarts, Live reload and configurations for enhanced development experience.
     - Lombok - Java annotation library which helps reduce boilerplate code.
-
-    - Login 
-      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/login.png" width="320"/>
-    * Bad credentials log in.
     
-      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/badcredentials.png" width="320"/>
-    * All the users in the database.
-      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/allusers.png" width="320"/>
-    * User already exists in the database.
-      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/useralredyExists.png" width="320"/>
-    * Uauthorized access to an endpoint
-      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/notAdmin.png" width="320"/>
-    * Refresh token
-      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/refreshtoken.png" width="320"/>
+## ScreenShots
+   - Login 
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/login.png"/>
+   - Bad credentials log in.
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/badcredentials.png" />
+   - All the users in the database.
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/allusers.png" />
+   - User already exists in the database.
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/useralredyExists.png"/>
+   - Unauthorized access to an endpoint
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/notAdmin.png" />
+   - Refresh token
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/refreshtoken.png" />
