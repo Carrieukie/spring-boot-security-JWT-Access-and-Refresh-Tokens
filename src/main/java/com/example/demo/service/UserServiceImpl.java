@@ -1,10 +1,10 @@
 package com.example.demo.service;
 
-import com.example.demo.dormain.Role;
-import com.example.demo.dormain.User;
+import com.example.demo.models.Role;
+import com.example.demo.models.User;
 import com.example.demo.mapper.DormaintoSpringUserMapper;
-import com.example.demo.repo.IRoleRepository;
-import com.example.demo.repo.IUserRepository;
+import com.example.demo.repository.IRoleRepository;
+import com.example.demo.repository.IUserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;

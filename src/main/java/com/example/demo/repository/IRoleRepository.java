@@ -1,9 +1,7 @@
-package com.example.demo.repo;
+package com.example.demo.repository;
 
-import com.example.demo.dormain.Role;
+import com.example.demo.models.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
 
 public interface IRoleRepository extends JpaRepository<Role, Long> {
     Role findAllByName(String name);

@@ -1,6 +1,6 @@
-package com.example.demo.repo;
+package com.example.demo.repository;
 
-import com.example.demo.dormain.User;
+import com.example.demo.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IUserRepository extends JpaRepository<User, Long> {

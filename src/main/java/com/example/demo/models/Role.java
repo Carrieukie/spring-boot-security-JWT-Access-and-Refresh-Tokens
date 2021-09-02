@@ -1,4 +1,4 @@
-package com.example.demo.dormain;
+package com.example.demo.models;
 
 
 import lombok.AllArgsConstructor;

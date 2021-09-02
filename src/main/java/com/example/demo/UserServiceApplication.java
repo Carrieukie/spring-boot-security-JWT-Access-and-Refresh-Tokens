@@ -1,12 +1,16 @@
 package com.example.demo;
 
-import com.example.demo.dormain.Role;
-import com.example.demo.dormain.User;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.example.demo.jwt.CustomAuthenticationFilter;
+import com.example.demo.models.Role;
+import com.example.demo.models.User;
 import com.example.demo.service.IUserService;
+import com.example.demo.util.TokenUtil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -19,15 +23,19 @@ public class UserServiceApplication {
 
         SpringApplication.run(UserServiceApplication.class, args);
 
-        var token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2MzA0MTEyNjR9.2Uz_t2OyLgG5X3hTbK2UMvL0kmOx0cWPCmtDiysNoNw";
-//        System.out.println(token.substring("Bearer ".length()));
-
     }
 
     @Bean
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    Algorithm algorithm(){
+        return Algorithm.HMAC256("secret".getBytes());
+    }
+
+
 
     @Bean
     CommandLineRunner run(IUserService userService){

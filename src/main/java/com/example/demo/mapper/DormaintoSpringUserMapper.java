@@ -1,6 +1,7 @@
 package com.example.demo.mapper;
 
-import com.example.demo.dormain.User;
+import com.example.demo.models.Role;
+import com.example.demo.models.User;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.ArrayList;
@@ -11,11 +12,9 @@ public class DormaintoSpringUserMapper {
         var name = user.getUsername();
         var password = user.getPassword();
         var authorities = new ArrayList<SimpleGrantedAuthority>();
-
-        user.getRoles().forEach(role ->
-                authorities.add(new SimpleGrantedAuthority(role.getName()))
-        );
-
+        for (Role role : user.getRoles()) {
+            authorities.add(new SimpleGrantedAuthority(role.getName()));
+        }
         return new org.springframework.security.core.userdetails.User(name, password, authorities);
     }
 }

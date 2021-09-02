@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.dormain.Role;
-import com.example.demo.dormain.User;
+import com.example.demo.models.Role;
+import com.example.demo.models.User;
 
 import java.util.List;
 
