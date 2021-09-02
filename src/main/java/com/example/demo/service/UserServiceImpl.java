@@ -45,10 +45,17 @@ public class UserServiceImpl implements IUserService, UserDetailsService {
 
     @Override
     public User saveUser(User user) {
+
+        var userExists = userRepo.findByUsername(user.getUsername()) != null;
+        if (userExists) {
+            log.error("User found in the database");
+            throw new IllegalStateException("User already exists");
+        }
+
         log.info("Saving new user {} to the database", user.getName());
+
         var encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
-
         return userRepo.save(user);
     }
 
