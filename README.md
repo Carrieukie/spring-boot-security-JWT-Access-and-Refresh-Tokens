@@ -16,15 +16,31 @@
     - Lombok - Java annotation library which helps reduce boilerplate code.
     
 ## ScreenShots
-   - Login 
+   - Login to get the access and refresh token.
+
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/login.png"/>
-   - Bad credentials log in.
+      
+   - When you login using bad credentials
+
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/badcredentials.png" />
-   - All the users in the database.
-      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/allusers.png" />
-   - User already exists in the database.
-      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/useralredyExists.png"/>
+   
    - Unauthorized access to an endpoint
+
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/notAdmin.png" />
+   
    - Refresh token
+
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/refreshtoken.png" />
+ 
+   - Getting all the users in the database.
+
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/allusers.png" />
+   
+   - Adding users to the database, You need to have the admin role
+   
+         <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/addMember.png"/>
+
+   - User already exists in the database.
+    
+      <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/useralredyExists.png"/>
+  
