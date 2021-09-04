@@ -47,6 +47,10 @@
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/allusers.png" />
    
    - Adding users to the database, You need to have the admin role.
+       
+       ```java
+        http.authorizeRequests().antMatchers("/api/user/save").hasAnyAuthority("ROLE_ADMIN")
+       ```
    
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/addMember.png" />
 
