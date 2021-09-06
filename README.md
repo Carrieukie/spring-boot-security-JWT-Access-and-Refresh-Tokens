@@ -30,15 +30,15 @@
 
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/login.png"/>
       
-   - When you login using bad credentials
+   - When you login using bad credentials.
 
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/badcredentials.png" />
    
-   - Unauthorized access to an endpoint
+   - Unauthorized access to an endpoint.
 
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/notAdmin.png" />
    
-   - Using the Refresh token to get another access token
+   - Using the Refresh token to get another access token.
 
       <img src="https://github.com/Carrieukie/spring-boot-security-JWT-Access-and-Refresh-Tokens/blob/main/assets/refreshtoken.png" />
  
